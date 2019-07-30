@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CharityBW - {{ title }} </title>
+        <!-- CSS, Keywords, metadata goes here-->
+        <link rel="stylesheet" href="https://unpkg.com/picnic">
+    </head>
+
+    <body>
+        <nav>
+            <a href="/" class="brand"><span>CharityBW</span></a>
+        </nav>
+
+        <article class="flex two" style="padding: 3em 1em;">
+            {% block content %}
+            <div>
+                <h1>{{ title }}</h1>
+                <form action="/find" method="post">
+                    <input type="text" name="description_text" placeholder="Description of what you are looking for">
+                    <input type="submit" value="Let's Help Some People">
+                </form>
+
+                <h3>Recent searches:</h3>
+                {% for comparison in comparisons %}
+                <span class="stack">{{ comparison }}</span>
+                {% endfor %}
+            </div>
+            {% endblock %}
+        </article>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/umbrellajs"/> -->
+ 
+    </body>
+</html>
