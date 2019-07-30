@@ -24,11 +24,5 @@ def create_app():
         finder = find_organizations(description_text)
         return render_template("find.html", finder=finder)
 
-    @app.route("/reset")
-    def reset():
-        DB.drop_all()
-        DB.create_all()
-        return render_template("layout.html", title="Reset!")
-
 
     return app
