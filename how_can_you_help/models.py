@@ -13,7 +13,7 @@ class Organization(DB.Model):
     website = DB.Column(DB.String(50), nullable=False)
     address = DB.Column(DB.String(50), nullable=False)
     city = DB.Column(DB.String(20), nullable=False)
-    zip_code = DB.Column(DB.Integer, nullable=False)
+    zip_code = DB.Column(DB.Numeric, nullable=False)
 
     def __repr__(self):
         return "<Organization {}".format(self.name)
