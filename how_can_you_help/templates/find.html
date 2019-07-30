@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+  <table class="primary" style="width: 100%;">
+    {% for i in finder %}
+    <tr>
+      <th>Name</th>
+    </tr>
+    <tr>
+      <td>{{ i }}</td>
+    </tr>
+
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}
