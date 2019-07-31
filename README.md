@@ -8,4 +8,12 @@
 
 * Using a text embedding assisted by Basilica.ai API, the app matches the user input with most relevant non-profit organizations.
 
+To use:
+
+POST request
+URL: reactjscode.com:8000/find
+
+Key: description_text
+Value: URL encoded string
+
 ![Drag Racing](image.png)
