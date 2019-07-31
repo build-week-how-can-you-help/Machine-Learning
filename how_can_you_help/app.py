@@ -3,6 +3,11 @@
 from flask import Flask, render_template, request
 from .models import DB, Organization
 from .process import find_organizations
+from OpenSSL import SSL
+
+context = SSL.Context(SSL.PROTOCOL_TLSv1_2)
+context.use_privatekey_file('server.key')
+context.use_certificate_file('server.crt')
 
 
 def create_app():
@@ -23,6 +28,12 @@ def create_app():
         description_text = request.values['description_text']
         finder = find_organizations(description_text)
         return render_template("find.html", finder=finder)
+    
+    if __name__ == '__main__':  
+        app.run(host='127.0.0.1', debug=True, ssl_context=context)
 
 
     return app
+
+
+
