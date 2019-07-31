@@ -25,7 +25,7 @@ def create_app():
         
         description_text = request.values['description_text']
         finder = find_organizations(description_text)
-        return render_template("find.html", finder=finder)
+        return finder
     
 
 
