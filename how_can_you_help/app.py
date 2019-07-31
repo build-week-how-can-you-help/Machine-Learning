@@ -14,15 +14,10 @@ def create_app():
     app = Flask(__name__)
 
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite3"
-    app.config.from_object('configmodule.ProductionConfig')
+    app.config['ENV'] = 'prod'
     DB.init_app(app)
     
-    class ProductionConfig(Config):
-        """
-        Production configurations
-        """
-        DEBUG = True
-        TESTING = True
+
 
     @app.route("/")
     def root():
