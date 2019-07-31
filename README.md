@@ -10,10 +10,10 @@
 
 To use:
 
-POST request
-URL: reactjscode.com:8000/find
+**POST request**
+**URL**: reactjscode.com:8000/find
 
-Key: description_text
-Value: URL encoded string
+**KEY**: description_text
+**VALUE**: URL encoded string
 
 ![Drag Racing](image.png)
