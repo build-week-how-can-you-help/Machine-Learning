@@ -12,7 +12,7 @@ To use:
 
 **POST request**
 
-**URL**: reactjscode.com:8000/find
+**URL**: http://50.62.56.186:8000/find
 
 **KEY**: description_text
 
